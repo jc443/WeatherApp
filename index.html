@@ -14,15 +14,11 @@
 $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
     //data is the JSON string
     for(var i in data){
-        $('#').append(data[i]);
-    }
-});
-
-$.getJSON('names.json', function(data){
-    for(var i in data){
         $('#weatherStuff').append(data[i]);
     }
 });
+
+
 </script>
 
 </head>
