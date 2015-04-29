@@ -14,14 +14,15 @@
 
 document.addEventListener("deviceready", onDeviceReady, false);
  function onDeviceReady() {
- 	alert "Device is Ready";
+ 	alert ("Device is Ready");
  	var weath = "-";
-       $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
+      var obj = $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
     //data is the JSON string
-    $.each( data, function (index, item){
-    	weath += index + ": " + item.text + "<br>";
-    });
-    $("#weather").html
+   // $.each( data, function (index, item){
+    //	weath += index + ": " + item.text + "<br>";
+    //});
+    //$("#weather").html
+    alert (obj);
 });
 
   
