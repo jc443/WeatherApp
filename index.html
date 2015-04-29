@@ -14,15 +14,21 @@
 
 document.addEventListener("deviceready", onDeviceReady, false);
  function onDeviceReady() {
-       var obj = $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
+ 	alert "Device is Ready";
+ 	var weath = "-";
+       $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
     //data is the JSON string
+    $.each( data, function (index, item){
+    	weath += index + ": " + item.text + "<br>";
+    });
+    $("#weather").html
 });
 
-alert obj;  
+  
     }
 
 
-//document.getElementById("#weatherStuff").innerHTML = obj.weather.current_weather.temp[0] + " " + obj.forcast.date[0];
+//document.getElementById("#weatherStuff").innerHTML = obj.weather.curren_weather[0].temp + " " + obj.forcast[0].date;
 
 
 </script>
@@ -60,6 +66,7 @@ alert obj;
     <section data-role="content">
 
 <button onclick= "onDeviceReady()">check Device</button> <br><br>
+	<div id="weather"> weather goes here</div>
 		
    </section>
  	
