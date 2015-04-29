@@ -14,7 +14,7 @@
 $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
     //data is the JSON string
     for(var i in data){
-        $('#page1').append(data[i]);
+        $('#weatherStuff').append(data[i]);
     }
 });
 
