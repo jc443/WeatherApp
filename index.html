@@ -15,7 +15,9 @@ var obj = $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4M
     //data is the JSON string
 });
 
-document.getElementById("#weatherStuff").innerHTML = obj.weather.current_weather.temp[0] + " " + obj.forcast.date[0];
+alert obj;
+
+//document.getElementById("#weatherStuff").innerHTML = obj.weather.current_weather.temp[0] + " " + obj.forcast.date[0];
 
 
 </script>
