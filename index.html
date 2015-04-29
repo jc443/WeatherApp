@@ -11,11 +11,16 @@
 <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 <script type="text/javascript">
-var obj = $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
+
+document.addEventListener("deviceready", onDeviceReady, false);
+ function onDeviceReady() {
+       var obj = $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
     //data is the JSON string
 });
 
-alert obj;
+alert obj;  
+    }
+
 
 //document.getElementById("#weatherStuff").innerHTML = obj.weather.current_weather.temp[0] + " " + obj.forcast.date[0];
 
@@ -54,7 +59,7 @@ alert obj;
   
     <section data-role="content">
 
-	<h2 id="weatherStuff">Home page section content goes here.	</h2>
+<button onclick= "onDeviceReady()">popup</button> <br><br>
 		
    </section>
  	
