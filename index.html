@@ -1,1 +1,100 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initail-scale=1">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        
+    }
+        
+    </script>
+  </head>
+  <body>
+    <div data-role="page" id="page1">
+
+    <header data-role="header">
+
+		<div  data-role="navbar">
+		
+			<ul>
+			
+				<li>
+					<a href="#page1"                 data-icon="home"   data-theme="b" 
+					                                 class = "ui-btn-active"  	       > HOME </a>
+				</li>
+			
+				<li>
+					<a href="#page2"                 data-icon="star"   data-theme="b" > INFORMATION </a>
+				</li>
+				
+				<li>
+					<a href="http://www.google.com"  data-icon="search" data-theme="b" > Google Search </a>
+				</li>				
+				
+			</ul>
+			
+		</div>
+	</header>
+	
+	 <section data-role="content">
+
+	<h2>Home page section content goes here.	</h2>
+		
+   </section>
+ 	
+    <footer data-role="footer"  data-theme="b" >
+	
+		<h4>Footer content goes here.	</h4>
+		
+    </footer>
+	
+</div>
+
+
+<div data-role="page" id="page2">
+
+		<div  data-role="navbar">
+		
+			<ul>
+			
+				<li>
+					<a href="#page1"    	data-icon="home"  data-theme="b" >HOME </a>
+				</li>
+			
+				<li>
+					<a href="#page2"    	data-icon="star"  data-theme="b" > INFORMATION </a>
+				</li>
+				
+				<li>
+					<a href="http://www.google.com"    data-icon="search"  data-theme="b" >GOOGLE </a>
+				</li>				
+				
+			</ul>
+		
+		</div>
+
+
+		<div data-role="content">	
+			<p>Page 2 content here.</p>
+			<a href="#page1"  > Go back to Page 1 </a>
+		</div>
+	
+		<footer data-role="footer" class="ui-bar">
+			<h4>Page 2 footer</h4>
+		</footer>
+	
+</div>
+  </body>
+</html>
