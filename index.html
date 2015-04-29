@@ -14,9 +14,10 @@
 $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&query=08360&temp_unit=f&ws_unit=kph', function(data) {
     //data is the JSON string
     for(var i in data){
-        $('#weatherStuff').append(data[i]);
+        $('#page1').append(data[i]);
     }
 });
+
 
 
 </script>
@@ -90,7 +91,7 @@ $.getJSON('http://www.myweather2.com/developer/forecast.ashx?uac=GAx4MrJTbu&quer
 
 
 		<div data-role="content">	
-			<p>Page 2 content here.</p>
+			<p id= "test">Page 2 content here.</p>
 			<a href="#page1"  > Go back to Page 1 </a>
 		</div>
 	
